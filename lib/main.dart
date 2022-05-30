@@ -36,11 +36,13 @@ class _BelajarNavBarState extends State<BelajarNavBar> {
 
   @override
   Widget build(BuildContext context) {
+    var black;
     return Scaffold(
       appBar: AppBar(
         title: Text("Navbar"),
       ),
       body: Center(child: _pages.elementAt(_selectedNavbar)),
+      backgroundColor: Colors.grey,
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -62,7 +64,7 @@ class _BelajarNavBarState extends State<BelajarNavBar> {
         ],
         currentIndex: _selectedNavbar,
         selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: Colors.black,
         showUnselectedLabels: true,
         onTap: _changeSelectedNavBar,
       ),
