@@ -25,6 +25,7 @@ class _BelajarNavBarState extends State<BelajarNavBar> {
     Icon(Icons.home, size: 200, color: Colors.blue),
     Icon(Icons.assignment, size: 200, color: Colors.blue),
     Icon(Icons.person, size: 200, color: Colors.blue),
+    Icon(Icons.mail, size: 200, color: Colors.blue),
   ];
 
   void _changeSelectedNavBar(int index) {
@@ -53,6 +54,10 @@ class _BelajarNavBarState extends State<BelajarNavBar> {
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: ('Akun'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.mail),
+            label: ('Inbox'),
           ),
         ],
         currentIndex: _selectedNavbar,
