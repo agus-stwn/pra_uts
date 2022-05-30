@@ -21,6 +21,11 @@ class BelajarNavBar extends StatefulWidget {
 
 class _BelajarNavBarState extends State<BelajarNavBar> {
   int _selectedNavbar = 0;
+  var _pages = <Widget>[
+    Icon(Icons.home, size: 200, color: Colors.blue),
+    Icon(Icons.assignment, size: 200, color: Colors.blue),
+    Icon(Icons.person, size: 200, color: Colors.blue),
+  ];
 
   void _changeSelectedNavBar(int index) {
     setState(() {
@@ -32,11 +37,9 @@ class _BelajarNavBarState extends State<BelajarNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Belajar Nav Bar"),
+        title: Text("Navbar"),
       ),
-      body: Center(
-        child: Text("Tab Index yang aktif : $_selectedNavbar", style: TextStyle(fontSize: 16)),
-      ),
+      body: Center(child: _pages.elementAt(_selectedNavbar)),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -46,10 +49,6 @@ class _BelajarNavBarState extends State<BelajarNavBar> {
           BottomNavigationBarItem(
             icon: Icon(Icons.assignment),
             label: ('Pesanan'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.mail),
-            label: ('Inbox'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
